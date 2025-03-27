@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  color: #303133;
+  background-color: #f5f7fa;
+  line-height: 1.5;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+:root {
+  /* 品牌色 */
+  --z-primary-color: #409eff;
+  --z-success-color: #67c23a;
+  --z-warning-color: #e6a23c;
+  --z-danger-color: #f56c6c;
+  --z-info-color: #909399;
+
+  /* 文字颜色 */
+  --z-text-color-primary: #303133;
+  --z-text-color-regular: #606266;
+  --z-text-color-secondary: #909399;
+  --z-text-color-placeholder: #c0c4cc;
+
+  /* 边框颜色 */
+  --z-border-color: #dcdfe6;
+  --z-border-color-light: #e4e7ed;
+  --z-border-color-lighter: #ebeef5;
+  --z-border-color-extra-light: #f2f6fc;
+
+  /* 背景颜色 */
+  --z-bg-color: #ffffff;
+  --z-bg-color-page: #f2f3f5;
+
+  /* 圆角 */
+  --z-border-radius-base: 4px;
+  --z-border-radius-small: 2px;
+  --z-border-radius-round: 20px;
+  --z-border-radius-circle: 100%;
+
+  /* 字体大小 */
+  --z-font-size-extra-large: 20px;
+  --z-font-size-large: 18px;
+  --z-font-size-medium: 16px;
+  --z-font-size-base: 14px;
+  --z-font-size-small: 13px;
+  --z-font-size-extra-small: 12px;
+
+  /* 间距 */
+  --z-spacing-extra-large: 24px;
+  --z-spacing-large: 16px;
+  --z-spacing-base: 12px;
+  --z-spacing-small: 8px;
+  --z-spacing-extra-small: 4px;
+} 

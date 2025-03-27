@@ -1,0 +1,47 @@
+import { Component } from 'vue'
+
+declare module 'vue' {
+  export interface GlobalComponents {
+    ZxButton: typeof import('../components/Button')['default']
+    ZxInput: typeof import('../components/Input')['default']
+    ZxForm: typeof import('../components/Form')['default']
+    ZxFormItem: typeof import('../components/Form/FormItem')['default']
+    ZxTable: typeof import('../components/Table')['default']
+    ZxTableColumn: typeof import('../components/Table/TableColumn')['default']
+    ZxSelect: typeof import('../components/Select')['default']
+    ZxOption: typeof import('../components/Select/Option')['default']
+    ZxCheckbox: typeof import('../components/Checkbox')['default']
+    ZxRadio: typeof import('../components/Radio')['default']
+    ZxSwitch: typeof import('../components/Switch')['default']
+    ZxDatePicker: typeof import('../components/DatePicker')['default']
+    ZxTimePicker: typeof import('../components/TimePicker')['default']
+    ZxDateTimePicker: typeof import('../components/DateTimePicker')['default']
+    ZxCascader: typeof import('../components/Cascader')['default']
+    ZxColorPicker: typeof import('../components/ColorPicker')['default']
+    ZxRate: typeof import('../components/Rate')['default']
+    ZxUpload: typeof import('../components/Upload')['default']
+    ZxTransfer: typeof import('../components/Transfer')['default']
+    ZxTree: typeof import('../components/Tree')['default']
+    ZxTreeNode: typeof import('../components/Tree/TreeNode')['default']
+    ZxSteps: typeof import('../components/Steps')['default']
+    ZxStep: typeof import('../components/Steps/Step')['default']
+    ZxTimeline: typeof import('../components/Timeline')['default']
+    ZxTabs: typeof import('../components/Tabs')['default']
+    ZxTabPane: typeof import('../components/Tabs/TabPane')['default']
+    ZxSkeleton: typeof import('../components/Skeleton')['default']
+    ZxProgress: typeof import('../components/Progress')['default']
+    ZxDrawer: typeof import('../components/Drawer')['default']
+    ZxModal: typeof import('../components/Modal')['default']
+    ZxMessage: typeof import('../components/Message')['default']
+    ZxAlert: typeof import('../components/Alert')['default']
+    ZxBadge: typeof import('../components/Badge')['default']
+    ZxTag: typeof import('../components/Tag')['default']
+    ZxCard: typeof import('../components/Card')['default']
+    ZxAvatar: typeof import('../components/Avatar')['default']
+    ZxTooltip: typeof import('../components/Tooltip')['default']
+    ZxInputNumber: typeof import('../components/InputNumber')['default']
+    ZxSlider: typeof import('../components/Slider')['default']
+  }
+}
+
+export {} 

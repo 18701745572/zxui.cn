@@ -1,0 +1,345 @@
+<template>
+  <div
+    class="zx-html"
+    :class="[
+      `zx-html--${size}`,
+      {
+        'is-disabled': disabled
+      }
+    ]"
+  >
+    <div
+      class="zx-html__preview"
+      @click="handlePreview"
+    >
+      <iframe
+        v-if="src"
+        :src="src"
+        :style="iframeStyle"
+        @load="handleLoad"
+        @error="handleError"
+      />
+      <div
+        v-else-if="content"
+        class="zx-html__content"
+        :style="contentStyle"
+        v-html="content"
+      />
+      <div
+        v-else
+        class="zx-html__placeholder"
+      >
+        <i class="zx-icon-file-html" />
+      </div>
+    </div>
+    <div
+      v-if="showActions"
+      class="zx-html__actions"
+    >
+      <span
+        class="zx-html__action"
+        @click="handlePreview"
+      >
+        <i class="zx-icon-zoom-in" />
+      </span>
+      <span
+        class="zx-html__action"
+        @click="handleEdit"
+      >
+        <i class="zx-icon-edit" />
+      </span>
+      <span
+        class="zx-html__action"
+        @click="handleDownload"
+      >
+        <i class="zx-icon-download" />
+      </span>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+
+const props = defineProps({
+  // HTML地址
+  src: {
+    type: String,
+    default: ''
+  },
+  // HTML内容
+  content: {
+    type: String,
+    default: ''
+  },
+  // 组件大小
+  size: {
+    type: String,
+    default: 'default',
+    validator: (value: string) => {
+      return ['large', 'default', 'small'].includes(value)
+    }
+  },
+  // 是否禁用
+  disabled: {
+    type: Boolean,
+    default: false
+  },
+  // 是否显示操作按钮
+  showActions: {
+    type: Boolean,
+    default: true
+  },
+  // 是否允许全屏
+  allowFullscreen: {
+    type: Boolean,
+    default: true
+  },
+  // 是否允许滚动
+  allowScroll: {
+    type: Boolean,
+    default: true
+  },
+  // 是否允许编辑
+  allowEdit: {
+    type: Boolean,
+    default: true
+  },
+  // 是否允许下载
+  allowDownload: {
+    type: Boolean,
+    default: true
+  },
+  // 字体大小
+  fontSize: {
+    type: Number,
+    default: 14
+  },
+  // 行高
+  lineHeight: {
+    type: Number,
+    default: 1.6
+  }
+})
+
+const emit = defineEmits(['load', 'error', 'preview', 'edit', 'download'])
+
+// 计算iframe样式
+const iframeStyle = computed(() => {
+  return {
+    width: '100%',
+    height: '100%',
+    border: 'none',
+    overflow: props.allowScroll ? 'auto' : 'hidden'
+  }
+})
+
+// 计算内容样式
+const contentStyle = computed(() => {
+  return {
+    fontSize: `${props.fontSize}px`,
+    lineHeight: props.lineHeight
+  }
+})
+
+// 处理预览
+const handlePreview = () => {
+  if (props.disabled) return
+  emit('preview')
+}
+
+// 处理编辑
+const handleEdit = () => {
+  if (props.disabled || !props.allowEdit) return
+  emit('edit')
+}
+
+// 处理下载
+const handleDownload = () => {
+  if (props.disabled || !props.allowDownload) return
+  emit('download')
+}
+
+// 处理加载完成
+const handleLoad = (e: Event) => {
+  emit('load', e)
+}
+
+// 处理加载错误
+const handleError = (e: Event) => {
+  emit('error', e)
+}
+</script>
+
+<style lang="scss" scoped>
+.zx-html {
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  height: 500px;
+  line-height: 500px;
+  text-align: center;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #f5f7fa;
+
+  &--large {
+    width: 480px;
+    height: 600px;
+    line-height: 600px;
+  }
+
+  &--small {
+    width: 320px;
+    height: 400px;
+    line-height: 400px;
+  }
+
+  &__preview {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    padding: 16px;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+
+  &__content {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: #606266;
+
+    :deep(h1) {
+      font-size: 2em;
+      margin: 0.67em 0;
+      font-weight: bold;
+    }
+
+    :deep(h2) {
+      font-size: 1.5em;
+      margin: 0.83em 0;
+      font-weight: bold;
+    }
+
+    :deep(h3) {
+      font-size: 1.17em;
+      margin: 1em 0;
+      font-weight: bold;
+    }
+
+    :deep(p) {
+      margin: 1em 0;
+    }
+
+    :deep(ul), :deep(ol) {
+      margin: 1em 0;
+      padding-left: 2em;
+    }
+
+    :deep(li) {
+      margin: 0.5em 0;
+    }
+
+    :deep(code) {
+      background-color: #f5f7fa;
+      padding: 0.2em 0.4em;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    :deep(pre) {
+      background-color: #f5f7fa;
+      padding: 1em;
+      border-radius: 4px;
+      overflow: auto;
+    }
+
+    :deep(blockquote) {
+      margin: 1em 0;
+      padding-left: 1em;
+      border-left: 4px solid #dcdfe6;
+      color: #909399;
+    }
+
+    :deep(table) {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1em 0;
+    }
+
+    :deep(th), :deep(td) {
+      border: 1px solid #dcdfe6;
+      padding: 0.5em;
+      text-align: left;
+    }
+
+    :deep(th) {
+      background-color: #f5f7fa;
+      font-weight: bold;
+    }
+
+    :deep(img) {
+      max-width: 100%;
+      height: auto;
+    }
+
+    :deep(a) {
+      color: #409eff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__placeholder {
+    width: 100%;
+    height: 100%;
+    color: #909399;
+    font-size: 24px;
+  }
+
+  &__actions {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__action {
+    margin: 0 8px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+
+    .zx-html__preview,
+    .zx-html__action {
+      cursor: not-allowed;
+    }
+  }
+}
+</style> 

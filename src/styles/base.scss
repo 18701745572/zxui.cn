@@ -1,0 +1,79 @@
+@use 'variables' as v;
+
+:root {
+  // 品牌色
+  --z-primary-color: #{v.$primary-color};
+  --z-success-color: #{v.$success-color};
+  --z-warning-color: #{v.$warning-color};
+  --z-danger-color: #{v.$danger-color};
+  --z-info-color: #{v.$info-color};
+
+  // 主色衍生色
+  --z-primary-color-light: #{v.$primary-color-light};
+  --z-success-color-light: #{v.$success-color-light};
+  --z-warning-color-light: #{v.$warning-color-light};
+  --z-danger-color-light: #{v.$danger-color-light};
+
+  // 文字颜色
+  --z-text-color-primary: #{v.$text-color-primary};
+  --z-text-color-regular: #{v.$text-color-regular};
+  --z-text-color-secondary: #{v.$text-color-secondary};
+  --z-text-color-placeholder: #{v.$text-color-placeholder};
+
+  // 边框颜色
+  --z-border-color: #{v.$border-color};
+  --z-border-color-light: #{v.$border-color-light};
+  --z-border-color-lighter: #{v.$border-color-lighter};
+  --z-border-color-extra-light: #{v.$border-color-extra-light};
+
+  // 背景颜色
+  --z-bg-color: #{v.$bg-color};
+  --z-bg-color-page: #{v.$bg-color-page};
+
+  // 圆角
+  --z-border-radius-base: #{v.$border-radius-base};
+  --z-border-radius-small: #{v.$border-radius-small};
+  --z-border-radius-round: #{v.$border-radius-round};
+  --z-border-radius-circle: #{v.$border-radius-circle};
+
+  // 字体大小
+  --z-font-size-extra-large: #{v.$font-size-extra-large};
+  --z-font-size-large: #{v.$font-size-large};
+  --z-font-size-medium: #{v.$font-size-medium};
+  --z-font-size-base: #{v.$font-size-base};
+  --z-font-size-small: #{v.$font-size-small};
+  --z-font-size-extra-small: #{v.$font-size-extra-small};
+
+  // 间距
+  --z-spacing-extra-large: #{v.$spacing-extra-large};
+  --z-spacing-large: #{v.$spacing-large};
+  --z-spacing-base: #{v.$spacing-base};
+  --z-spacing-small: #{v.$spacing-small};
+  --z-spacing-extra-small: #{v.$spacing-extra-small};
+}
+
+// 暗黑主题
+:root.dark {
+  // 品牌色
+  --z-primary-color: #{v.$primary-color};
+  --z-success-color: #{v.$success-color};
+  --z-warning-color: #{v.$warning-color};
+  --z-danger-color: #{v.$danger-color};
+  --z-info-color: #{v.$info-color};
+
+  // 文字颜色
+  --z-text-color-primary: #E5EAF3;
+  --z-text-color-regular: #CFD3DC;
+  --z-text-color-secondary: #A3A6AD;
+  --z-text-color-placeholder: #8D9095;
+
+  // 边框颜色
+  --z-border-color: #4C4D4F;
+  --z-border-color-light: #414243;
+  --z-border-color-lighter: #363637;
+  --z-border-color-extra-light: #2B2B2C;
+
+  // 背景颜色
+  --z-bg-color: #141414;
+  --z-bg-color-page: #0a0a0a;
+} 
