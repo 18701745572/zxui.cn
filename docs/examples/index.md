@@ -9,25 +9,25 @@
 ```vue
 <template>
   <div class="login-form">
-    <z-form ref="formRef" :model="formData" :rules="rules">
-      <z-form-item prop="username">
-        <z-input
+    <zx-form ref="formRef" :model="formData" :rules="rules">
+      <zx-form-item prop="username">
+        <zx-input
           v-model="formData.username"
           placeholder="请输入用户名"
           prefix-icon="user"
         />
       </z-form-item>
-      <z-form-item prop="password">
-        <z-input
+      <zx-form-item prop="password">
+        <zx-input
           v-model="formData.password"
           type="password"
           placeholder="请输入密码"
           prefix-icon="lock"
         />
       </z-form-item>
-      <z-form-item>
-        <z-button type="primary" @click="handleSubmit">登录</z-button>
-        <z-button @click="handleReset">重置</z-button>
+      <zx-form-item>
+        <zx-button type="primary" @click="handleSubmit">登录</z-button>
+        <zx-button @click="handleReset">重置</z-button>
       </z-form-item>
     </z-form>
   </div>
@@ -81,16 +81,16 @@ const handleReset = () => {
 ```vue
 <template>
   <div class="table-example">
-    <z-table :data="tableData" :loading="loading">
-      <z-table-column prop="name" label="姓名" />
-      <z-table-column prop="age" label="年龄" />
-      <z-table-column prop="address" label="地址" />
-      <z-table-column label="操作">
+    <zx-table :data="tableData" :loading="loading">
+      <zx-table-column prop="name" label="姓名" />
+      <zx-table-column prop="age" label="年龄" />
+      <zx-table-column prop="address" label="地址" />
+      <zx-table-column label="操作">
         <template #default="{ row }">
-          <z-button type="primary" size="small" @click="handleEdit(row)">
+          <zx-button type="primary" size="small" @click="handleEdit(row)">
             编辑
           </z-button>
-          <z-button type="danger" size="small" @click="handleDelete(row)">
+          <zx-button type="danger" size="small" @click="handleDelete(row)">
             删除
           </z-button>
         </template>
@@ -131,8 +131,8 @@ const handleDelete = (row: any) => {
 ```vue
 <template>
   <div class="theme-example">
-    <z-space>
-      <z-button
+    <zx-space>
+      <zx-button
         v-for="theme in themes"
         :key="theme.name"
         :class="{ active: currentTheme === theme.name }"
@@ -143,11 +143,11 @@ const handleDelete = (row: any) => {
     </z-space>
 
     <div class="preview-area">
-      <z-card>
-        <z-space direction="vertical">
-          <z-button type="primary">主要按钮</z-button>
-          <z-input placeholder="请输入内容" />
-          <z-switch v-model="switchValue" />
+      <zx-card>
+        <zx-space direction="vertical">
+          <zx-button type="primary">主要按钮</z-button>
+          <zx-input placeholder="请输入内容" />
+          <zx-switch v-model="switchValue" />
         </z-space>
       </z-card>
     </div>
@@ -196,19 +196,19 @@ const changeTheme = (theme: { name: string }) => {
 ```vue
 <template>
   <div class="dynamic-form">
-    <z-form :model="formData" :rules="rules">
-      <z-form-item
+    <zx-form :model="formData" :rules="rules">
+      <zx-form-item
         v-for="(field, index) in formData.fields"
         :key="index"
         :label="field.label"
         :prop="'fields.' + index + '.value'"
       >
-        <z-input v-model="field.value" />
-        <z-button type="danger" @click="removeField(index)">删除</z-button>
+        <zx-input v-model="field.value" />
+        <zx-button type="danger" @click="removeField(index)">删除</z-button>
       </z-form-item>
-      <z-form-item>
-        <z-button type="primary" @click="addField">添加字段</z-button>
-        <z-button type="success" @click="submitForm">提交</z-button>
+      <zx-form-item>
+        <zx-button type="primary" @click="addField">添加字段</z-button>
+        <zx-button type="success" @click="submitForm">提交</z-button>
       </z-form-item>
     </z-form>
   </div>

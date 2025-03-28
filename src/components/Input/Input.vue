@@ -1,8 +1,8 @@
 <template>
   <div
     :class="[
-      'z-input',
-      `z-input--${size}`,
+      'zx-input',
+      `zx-input--${size}`,
       {
         'is-disabled': disabled,
         'is-clearable': clearable && modelValue
@@ -11,8 +11,8 @@
     @mouseenter="hovering = true"
     @mouseleave="hovering = false"
   >
-    <div class="z-input__wrapper">
-      <span v-if="prefixIcon" class="z-input__prefix-icon">
+    <div class="zx-input__wrapper">
+      <span v-if="prefixIcon" class="zx-input__prefix-icon">
         <i :class="prefixIcon"></i>
       </span>
       
@@ -22,7 +22,7 @@
         :type="type"
         :disabled="disabled"
         :placeholder="placeholder"
-        class="z-input__inner"
+        class="zx-input__inner"
         @input="handleInput"
         @focus="handleFocus"
         @blur="handleBlur"
@@ -30,13 +30,13 @@
 
       <span
         v-if="clearable && modelValue && hovering"
-        class="z-input__clear"
+        class="zx-input__clear"
         @click="clear"
       >
         ×
       </span>
       
-      <span v-if="suffixIcon" class="z-input__suffix-icon">
+      <span v-if="suffixIcon" class="zx-input__suffix-icon">
         <i :class="suffixIcon"></i>
       </span>
     </div>
@@ -50,7 +50,7 @@ type InputSize = 'small' | 'medium' | 'large'
 type InputType = 'text' | 'password' | 'number' | 'email' | 'tel' | 'url'
 
 defineOptions({
-  name: 'ZInput'
+  name: 'ZxInput'
 })
 
 const props = defineProps({
@@ -116,7 +116,7 @@ const clear = () => {
 </script>
 
 <style lang="scss">
-.z-input {
+.zx-input {
   position: relative;
   width: 100%;
   display: inline-flex;
@@ -177,33 +177,33 @@ const clear = () => {
   // 尺寸
   &--small {
     font-size: var(--z-font-size-small);
-    .z-input__wrapper {
+    .zx-input__wrapper {
       height: 32px;
     }
   }
 
   &--medium {
     font-size: var(--z-font-size-base);
-    .z-input__wrapper {
+    .zx-input__wrapper {
       height: 36px;
     }
   }
 
   &--large {
     font-size: var(--z-font-size-large);
-    .z-input__wrapper {
+    .zx-input__wrapper {
       height: 40px;
     }
   }
 
   &.is-disabled {
-    .z-input__wrapper {
+    .zx-input__wrapper {
       background-color: var(--z-bg-color-page);
       border-color: var(--z-border-color-light);
       cursor: not-allowed;
     }
     
-    .z-input__inner {
+    .zx-input__inner {
       cursor: not-allowed;
       color: var(--z-text-color-placeholder);
     }

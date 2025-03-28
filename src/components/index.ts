@@ -1,5 +1,3 @@
-export { default as ZButton } from './Button/Button.vue'
-export { default as ZInput } from './Input/Input.vue'
 export { default as ZxButton } from './Button'
 export { default as ZxInput } from './Input'
 export { default as ZxCard } from './Card'

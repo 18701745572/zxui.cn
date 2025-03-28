@@ -8,31 +8,31 @@
       <div class="demo-block">
         <h3>基础用法</h3>
         <div class="demo-row">
-          <z-button>默认按钮</z-button>
-          <z-button type="primary">主要按钮</z-button>
-          <z-button type="success">成功按钮</z-button>
-          <z-button type="warning">警告按钮</z-button>
-          <z-button type="danger">危险按钮</z-button>
+          <zx-button>默认按钮</z-button>
+          <zx-button type="primary">主要按钮</z-button>
+          <zx-button type="success">成功按钮</z-button>
+          <zx-button type="warning">警告按钮</z-button>
+          <zx-button type="danger">危险按钮</z-button>
         </div>
       </div>
 
       <div class="demo-block">
         <h3>禁用状态</h3>
         <div class="demo-row">
-          <z-button disabled>默认按钮</z-button>
-          <z-button type="primary" disabled>主要按钮</z-button>
-          <z-button type="success" disabled>成功按钮</z-button>
-          <z-button type="warning" disabled>警告按钮</z-button>
-          <z-button type="danger" disabled>危险按钮</z-button>
+          <zx-button disabled>默认按钮</z-button>
+          <zx-button type="primary" disabled>主要按钮</z-button>
+          <zx-button type="success" disabled>成功按钮</z-button>
+          <zx-button type="warning" disabled>警告按钮</z-button>
+          <zx-button type="danger" disabled>危险按钮</z-button>
         </div>
       </div>
 
       <div class="demo-block">
         <h3>不同尺寸</h3>
         <div class="demo-row">
-          <z-button size="small">小型按钮</z-button>
-          <z-button>默认按钮</z-button>
-          <z-button size="large">大型按钮</z-button>
+          <zx-button size="small">小型按钮</z-button>
+          <zx-button>默认按钮</z-button>
+          <zx-button size="large">大型按钮</z-button>
         </div>
       </div>
     </section>
@@ -43,38 +43,38 @@
       <div class="demo-block">
         <h3>基础用法</h3>
         <div class="demo-row">
-          <z-input v-model="input1" placeholder="请输入内容" />
+          <zx-input v-model="input1" placeholder="请输入内容" />
         </div>
       </div>
 
       <div class="demo-block">
         <h3>禁用状态</h3>
         <div class="demo-row">
-          <z-input v-model="input2" disabled placeholder="禁用状态" />
+          <zx-input v-model="input2" disabled placeholder="禁用状态" />
         </div>
       </div>
 
       <div class="demo-block">
         <h3>可清空</h3>
         <div class="demo-row">
-          <z-input v-model="input3" clearable placeholder="请输入内容" />
+          <zx-input v-model="input3" clearable placeholder="请输入内容" />
         </div>
       </div>
 
       <div class="demo-block">
         <h3>带图标</h3>
         <div class="demo-row">
-          <z-input v-model="input4" prefix-icon="search" placeholder="搜索" />
-          <z-input v-model="input5" suffix-icon="calendar" placeholder="选择日期" />
+          <zx-input v-model="input4" prefix-icon="search" placeholder="搜索" />
+          <zx-input v-model="input5" suffix-icon="calendar" placeholder="选择日期" />
         </div>
       </div>
 
       <div class="demo-block">
         <h3>不同尺寸</h3>
         <div class="demo-row">
-          <z-input size="small" placeholder="小型输入框" />
-          <z-input placeholder="默认输入框" />
-          <z-input size="large" placeholder="大型输入框" />
+          <zx-input size="small" placeholder="小型输入框" />
+          <zx-input placeholder="默认输入框" />
+          <zx-input size="large" placeholder="大型输入框" />
         </div>
       </div>
     </section>

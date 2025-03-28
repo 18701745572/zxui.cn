@@ -82,7 +82,7 @@ export default defineConfig({
 
 ```vue
 <template>
-  <z-button type="primary">按钮</z-button>
+  <zx-button type="primary">按钮</zx-button>
 </template>
 ```
 
@@ -95,7 +95,7 @@ export default defineConfig({
 </head>
 <body>
   <div id="app">
-    <z-button type="primary">按钮</z-button>
+    <zx-button type="primary">按钮</zx-button>
   </div>
   <!-- 引入 Vue 3 -->
   <script src="//unpkg.com/vue@3"></script>
@@ -138,10 +138,10 @@ export default defineConfig({
 ```vue
 <template>
   <div>
-    <z-button type="primary">主要按钮</z-button>
-    <z-button type="success">成功按钮</z-button>
-    <z-button type="warning">警告按钮</z-button>
-    <z-button type="danger">危险按钮</z-button>
+    <zx-button type="primary">主要按钮</zx-button>
+    <zx-button type="success">成功按钮</zx-button>
+    <zx-button type="warning">警告按钮</zx-button>
+    <zx-button type="danger">危险按钮</zx-button>
   </div>
 </template>
 
@@ -172,7 +172,7 @@ import 'zxui-cn/dist/style.css'
 ### 按需引入失效
 
 1. 检查 Vite 配置是否正确
-2. 确保组件名称使用正确（以 `z-` 开头）
+2. 确保组件名称使用正确（以 `zx-` 开头）
 3. 尝试清除缓存并重新运行开发服务器：
 
 ```bash

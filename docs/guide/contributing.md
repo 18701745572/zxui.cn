@@ -214,7 +214,7 @@ git push origin feat/new-component
 ```vue
 <template>
   <div class="example">
-    <z-button type="primary">示例按钮</z-button>
+    <zx-button type="primary">示例按钮</z-button>
   </div>
 </template>
 
@@ -285,4 +285,77 @@ pnpm publish
 
 ## 致谢
 
-感谢所有贡献者对 ZXUI CN 的支持和帮助！ 
+感谢所有贡献者对 ZXUI CN 的支持和帮助！
+
+# 组件命名规范
+
+## 组件前缀规范
+
+我们采用统一的命名规范来确保代码的一致性：
+
+1. 组件注册名称：
+```typescript
+defineOptions({
+  name: 'ZxButton'  // 使用 Zx 前缀，PascalCase 命名
+})
+```
+
+2. 组件使用方式：
+```vue
+<!-- 推荐使用 kebab-case -->
+<zx-button type="primary">按钮</zx-button>
+
+<!-- 也支持 PascalCase -->
+<ZxButton type="primary">按钮</ZxButton>
+```
+
+3. CSS 类名：
+```scss
+.zx-button {  // 使用 zx- 前缀
+  &__wrapper { ... }  // BEM 命名方式
+  &--primary { ... }  // 修饰符
+}
+```
+
+4. 主题变量：
+```css
+:root {
+  --z-primary-color: #409eff;  // 主题变量使用 z- 前缀
+  --z-success-color: #67c23a;
+}
+```
+
+## 命名规范说明
+
+1. 组件前缀：
+- 使用 `Zx` 作为组件前缀，表示 ZXUI 组件库
+- 组件注册名使用 PascalCase：`ZxButton`、`ZxInput`
+- 模板中推荐使用 kebab-case：`<zx-button>`
+
+2. CSS 类名：
+- 使用 `zx-` 作为前缀
+- 遵循 BEM 命名规范
+- 使用 kebab-case 命名方式
+
+3. 主题变量：
+- 使用 `--z-` 作为前缀
+- 使用 kebab-case 命名方式
+- 与组件类名区分，专门用于主题定制
+
+## 为什么这样规范？
+
+1. 避免命名冲突：
+- 使用特定前缀避免与其他库或用户代码冲突
+- 区分组件类名和主题变量
+
+2. 提高可维护性：
+- 统一的命名方式便于理解和维护
+- BEM 命名方式清晰表达类名的层级关系
+
+3. 提供灵活性：
+- 支持 PascalCase 和 kebab-case 两种使用方式
+- 主题变量独立命名便于全局管理
+
+4. 遵循最佳实践：
+- 符合 Vue 官方推荐的命名规范
+- 采用通用的 CSS 命名规范 

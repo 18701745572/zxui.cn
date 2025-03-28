@@ -1,9 +1,9 @@
 <template>
   <button
     :class="[
-      'z-button',
-      `z-button--${type}`,
-      `z-button--${size}`,
+      'zx-button',
+      `zx-button--${type}`,
+      `zx-button--${size}`,
       { 'is-disabled': disabled }
     ]"
     :disabled="disabled"
@@ -61,7 +61,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.z-button {
+.zx-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;

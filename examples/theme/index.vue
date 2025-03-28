@@ -50,7 +50,7 @@
 
         <h3>暗黑模式</h3>
         <div class="dark-mode-switch">
-          <z-button @click="toggleDarkMode">
+          <zx-button @click="toggleDarkMode">
             {{ isDark ? '切换到亮色模式' : '切换到暗黑模式' }}
           </z-button>
         </div>
@@ -58,15 +58,15 @@
         <div class="preview-area">
           <h4>预览效果</h4>
           <div class="demo-row">
-            <z-button type="primary">主要按钮</z-button>
-            <z-button type="success">成功按钮</z-button>
-            <z-button type="warning">警告按钮</z-button>
-            <z-button type="danger">危险按钮</z-button>
+            <zx-button type="primary">主要按钮</z-button>
+            <zx-button type="success">成功按钮</z-button>
+            <zx-button type="warning">警告按钮</z-button>
+            <zx-button type="danger">危险按钮</z-button>
           </div>
 
           <div class="demo-row">
-            <z-input v-model="input1" placeholder="基础输入框" />
-            <z-input v-model="input2" clearable placeholder="可清空输入框" />
+            <zx-input v-model="input1" placeholder="基础输入框" />
+            <zx-input v-model="input2" clearable placeholder="可清空输入框" />
           </div>
 
           <div class="demo-row">

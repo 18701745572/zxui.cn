@@ -66,52 +66,36 @@ export default defineConfig({
 
 ```vue
 <template>
-  <div class="container">
-    <h1>ZXUI CN 示例</h1>
-    
-    <!-- 按钮示例 -->
-    <div class="demo-section">
-      <h2>按钮</h2>
-      <z-space>
-        <z-button>默认按钮</z-button>
-        <z-button type="primary">主要按钮</z-button>
-        <z-button type="success">成功按钮</z-button>
-        <z-button type="warning">警告按钮</z-button>
-        <z-button type="danger">危险按钮</z-button>
-      </z-space>
-    </div>
+  <zx-space>
+    <zx-button>默认按钮</zx-button>
+    <zx-button type="primary">主要按钮</zx-button>
+    <zx-button type="success">成功按钮</zx-button>
+    <zx-button type="warning">警告按钮</zx-button>
+    <zx-button type="danger">危险按钮</zx-button>
+  </zx-space>
 
-    <!-- 输入框示例 -->
-    <div class="demo-section">
-      <h2>输入框</h2>
-      <z-space direction="vertical">
-        <z-input v-model="input" placeholder="请输入内容" />
-        <z-input
-          v-model="password"
-          type="password"
-          show-password
-          placeholder="请输入密码"
-        />
-      </z-space>
-    </div>
+  <zx-space direction="vertical">
+    <zx-input v-model="input" placeholder="请输入内容" />
+    <zx-input
+      v-model="password"
+      type="password"
+      placeholder="请输入密码"
+      show-password
+    />
+  </zx-space>
 
-    <!-- 表单示例 -->
-    <div class="demo-section">
-      <h2>表单</h2>
-      <z-form :model="form" :rules="rules" ref="formRef">
-        <z-form-item prop="name" label="姓名">
-          <z-input v-model="form.name" placeholder="请输入姓名" />
-        </z-form-item>
-        <z-form-item prop="email" label="邮箱">
-          <z-input v-model="form.email" placeholder="请输入邮箱" />
-        </z-form-item>
-        <z-form-item>
-          <z-button type="primary" @click="handleSubmit">提交</z-button>
-          <z-button @click="handleReset">重置</z-button>
-        </z-form-item>
-      </z-form>
-    </div>
-  </div>
+  <zx-form :model="form" :rules="rules" ref="formRef">
+    <zx-form-item prop="name" label="姓名">
+      <zx-input v-model="form.name" placeholder="请输入姓名" />
+    </zx-form-item>
+    <zx-form-item prop="email" label="邮箱">
+      <zx-input v-model="form.email" placeholder="请输入邮箱" />
+    </zx-form-item>
+    <zx-form-item>
+      <zx-button type="primary" @click="handleSubmit">提交</zx-button>
+      <zx-button @click="handleReset">重置</zx-button>
+    </zx-form-item>
+  </zx-form>
 </template>
 
 <script setup lang="ts">
@@ -286,9 +270,9 @@ export default defineConfig({
 
 ```vue
 <template>
-  <z-button type="primary">主要按钮</z-button>
-  <z-button type="success">成功按钮</z-button>
-  <z-input v-model="input" placeholder="请输入" />
+  <zx-button type="primary">主要按钮</zx-button>
+  <zx-button type="success">成功按钮</zx-button>
+  <zx-input v-model="input" placeholder="请输入" />
 </template>
 
 <script setup lang="ts">
@@ -327,9 +311,9 @@ document.documentElement.classList.remove('dark')
 ```vue
 <template>
   <div class="theme-switch">
-    <z-button @click="toggleTheme">
-      {{ isDark ? '切换到亮色模式' : '切换到暗黑模式' }}
-    </z-button>
+    <zx-button @click="toggleTheme">
+      切换主题
+    </zx-button>
   </div>
 </template>
 

@@ -39,7 +39,7 @@ app.mount('#app')
 
 ```vue
 <template>
-  <z-button type="primary">主要按钮</z-button>
+  <zx-button type="primary">主要按钮</zx-button>
 </template>
 
 <script setup lang="ts">
@@ -58,7 +58,7 @@ ZXUI-CN 使用 TypeScript 编写，提供完整的类型定义文件。
 
 ```vue
 <template>
-  <z-button type="primary" @click="handleClick">点击我</z-button>
+  <zx-button type="primary" @click="handleClick">点击我</zx-button>
 </template>
 
 <script setup lang="ts">

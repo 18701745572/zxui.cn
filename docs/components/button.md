@@ -128,8 +128,8 @@ Button 组件提供除了默认值以外的三种尺寸。
 ```vue
 <template>
   <div class="form-buttons">
-    <z-button type="primary" @click="handleSubmit">提交</z-button>
-    <z-button @click="handleReset">重置</z-button>
+    <zx-button type="primary" @click="handleSubmit">提交</zx-button>
+    <zx-button @click="handleReset">重置</zx-button>
   </div>
 </template>
 
@@ -148,7 +148,7 @@ const handleReset = () => {
 
 ```vue
 <template>
-  <z-button type="primary" icon="search">搜索</z-button>
-  <z-button type="success" icon="upload">上传</z-button>
+  <zx-button type="primary" icon="search">搜索</zx-button>
+  <zx-button type="success" icon="upload">上传</zx-button>
 </template>
 ```

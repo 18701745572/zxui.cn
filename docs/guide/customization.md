@@ -125,9 +125,9 @@ Object.entries(theme).forEach(([key, value]) => {
 ```vue
 <template>
   <div class="custom-form">
-    <z-form>
-      <z-form-item>
-        <z-input />
+    <zx-form>
+      <zx-form-item>
+        <zx-input />
       </z-form-item>
     </z-form>
   </div>
@@ -154,7 +154,7 @@ Object.entries(theme).forEach(([key, value]) => {
 ```vue
 <template>
   <!-- 自定义按钮样式 -->
-  <z-button
+  <zx-button
     :style="{ 
       '--zx-button-font-weight': 600,
       '--zx-button-border-radius': '8px'
@@ -165,7 +165,7 @@ Object.entries(theme).forEach(([key, value]) => {
   </z-button>
   
   <!-- 自定义输入框样式 -->
-  <z-input
+  <zx-input
     :style="{
       '--zx-input-border-radius': '8px',
       '--zx-input-focus-border-color': '#722ed1'

@@ -146,9 +146,9 @@ document.documentElement.classList.remove('dark');
   <div class="theme-config">
     <div class="theme-mode">
       <span>主题模式：</span>
-      <z-button @click="toggleTheme">
+      <zx-button @click="toggleTheme">
         {{ isDark ? '切换到亮色模式' : '切换到暗黑模式' }}
-      </z-button>
+      </zx-button>
     </div>
     
     <div class="theme-color">
@@ -249,7 +249,7 @@ applyTheme(darkTheme)
 
 ```vue
 <template>
-  <z-button class="custom-button">自定义按钮</z-button>
+  <zx-button class="custom-button">自定义按钮</zx-button>
 </template>
 
 <style>

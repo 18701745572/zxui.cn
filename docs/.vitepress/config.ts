@@ -6,6 +6,7 @@ export default defineConfig({
   lang: 'zh-CN',
   lastUpdated: true,
   cleanUrls: true,
+  ignoreDeadLinks: true,
   
   head: [
     ['meta', { charset: 'utf-8' }],
@@ -34,6 +35,16 @@ export default defineConfig({
     },
     optimizeDeps: {
       include: ['vue', '@vueuse/core']
+    },
+    esbuild: {
+      charset: 'utf8'
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          charset: false
+        }
+      }
     }
   },
   

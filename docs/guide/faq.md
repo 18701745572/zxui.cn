@@ -58,7 +58,7 @@ export default defineConfig({
 ```vue
 <style lang="scss" scoped>
 .custom-form {
-  :deep(.z-input) {
+  :deep(.zx-input) {
     width: 300px;
   }
 }
@@ -88,11 +88,11 @@ const toggleTheme = () => {
 
 ```vue
 <template>
-  <z-form :model="form" :rules="rules" ref="formRef">
-    <z-form-item prop="username">
-      <z-input v-model="form.username" />
-    </z-form-item>
-  </z-form>
+  <zx-form :model="form" :rules="rules" ref="formRef">
+    <zx-form-item prop="username">
+      <zx-input v-model="form.username" />
+    </zx-form-item>
+  </zx-form>
 </template>
 
 <script setup lang="ts">
@@ -127,14 +127,14 @@ const rules = {
 
 ```vue
 <template>
-  <z-table :data="tableData" :default-sort="{ prop: 'date', order: 'descending' }">
-    <z-table-column
+  <zx-table :data="tableData" :default-sort="{ prop: 'date', order: 'descending' }">
+    <zx-table-column
       prop="date"
       label="日期"
       sortable
       :sort-method="sortByDate"
     />
-  </z-table>
+  </zx-table>
 </template>
 
 <script setup lang="ts">
@@ -152,7 +152,7 @@ const sortByDate = (a: any, b: any) => {
 
 ```vue
 <template>
-  <z-virtual-list
+  <zx-virtual-list
     :data="largeData"
     :item-size="50"
     :buffer-size="10"
@@ -160,7 +160,7 @@ const sortByDate = (a: any, b: any) => {
     <template #default="{ item }">
       <div class="list-item">{{ item.name }}</div>
     </template>
-  </z-virtual-list>
+  </zx-virtual-list>
 </template>
 ```
 
@@ -168,7 +168,7 @@ const sortByDate = (a: any, b: any) => {
 
 ```vue
 <template>
-  <z-table
+  <zx-table
     v-loading="loading"
     :data="tableData"
     :pagination="{
@@ -179,7 +179,7 @@ const sortByDate = (a: any, b: any) => {
     @page-change="handlePageChange"
   >
     <!-- 表格列配置 -->
-  </z-table>
+  </zx-table>
 </template>
 
 <script setup lang="ts">

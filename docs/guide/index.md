@@ -57,7 +57,7 @@ yarn add zxui-cn
 
 ```vue
 <template>
-  <z-button type="primary">主要按钮</z-button>
+  <zx-button type="primary">主要按钮</zx-button>
 </template>
 
 <script setup lang="ts">
