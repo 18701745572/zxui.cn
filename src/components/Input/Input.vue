@@ -47,7 +47,7 @@
 import { ref, PropType } from 'vue'
 
 type InputSize = 'small' | 'medium' | 'large'
-type InputType = 'text' | 'password' | 'number' | 'email' | 'tel' | 'url'
+type InputType = 'text' | 'password' | 'number' | 'email' | 'tel' | 'url' | 'textarea'
 
 defineOptions({
   name: 'ZxInput'
@@ -77,7 +77,7 @@ const props = defineProps({
   type: {
     type: String as PropType<InputType>,
     default: 'text',
-    validator: (value: InputType) => ['text', 'password', 'number', 'email', 'tel', 'url'].includes(value)
+    validator: (value: InputType) => ['text', 'password', 'number', 'email', 'tel', 'url', 'textarea'].includes(value)
   }
 })
 

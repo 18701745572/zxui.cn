@@ -6,7 +6,7 @@
     <h2>基础用法</h2>
     <div class="demo-block">
       <div class="demo-block-content">
-        <zx-radio></zx-radio>
+        <zx-radio v-model="radio" label="1">选项一</zx-radio>
       </div>
       <div class="demo-block-description">
         Radio 单选框的基础用法示例。
@@ -56,6 +56,12 @@
     </table>
   </div>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const radio = ref('')
+</script>
 
 <style scoped>
 .component-demo {

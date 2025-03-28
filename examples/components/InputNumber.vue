@@ -6,7 +6,7 @@
     <h2>基础用法</h2>
     <div class="demo-block">
       <div class="demo-block-content">
-        <zx-inputnumber></zx-inputnumber>
+        <zx-input-number></zx-input-number>
       </div>
       <div class="demo-block-description">
         InputNumber 数字输入框的基础用法示例。
