@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, provide, ref, PropType } from 'vue'
+import { defineComponent, provide, ref, PropType, watch } from 'vue'
 
 type CheckboxGroupSize = 'small' | 'medium' | 'large'
 type CheckboxGroupValue = (string | number | boolean)[]
@@ -54,6 +54,10 @@ export default defineComponent({
   emits: ['update:modelValue', 'change'],
   setup(props: CheckboxGroupProps, { emit }: { emit: CheckboxGroupEmits }) {
     const modelValue = ref<CheckboxGroupValue>(props.modelValue)
+
+    watch(() => props.modelValue, (newValue: CheckboxGroupValue) => {
+      modelValue.value = newValue
+    })
 
     const updateModelValue = (value: CheckboxGroupValue) => {
       modelValue.value = value

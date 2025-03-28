@@ -214,7 +214,7 @@ git push origin feat/new-component
 ```vue
 <template>
   <div class="example">
-    <zx-button type="primary">示例按钮</z-button>
+    <zx-button type="primary">示例按钮</zx-button>
   </div>
 </template>
 

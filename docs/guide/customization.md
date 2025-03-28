@@ -162,7 +162,7 @@ Object.entries(theme).forEach(([key, value]) => {
     type="primary"
   >
     自定义按钮
-  </z-button>
+  </zx-button>
   
   <!-- 自定义输入框样式 -->
   <zx-input

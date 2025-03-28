@@ -52,16 +52,16 @@
         <div class="dark-mode-switch">
           <zx-button @click="toggleDarkMode">
             {{ isDark ? '切换到亮色模式' : '切换到暗黑模式' }}
-          </z-button>
+          </zx-button>
         </div>
 
         <div class="preview-area">
           <h4>预览效果</h4>
           <div class="demo-row">
-            <zx-button type="primary">主要按钮</z-button>
-            <zx-button type="success">成功按钮</z-button>
-            <zx-button type="warning">警告按钮</z-button>
-            <zx-button type="danger">危险按钮</z-button>
+            <zx-button type="primary">主要按钮</zx-button>
+            <zx-button type="success">成功按钮</zx-button>
+            <zx-button type="warning">警告按钮</zx-button>
+            <zx-button type="danger">危险按钮</zx-button>
           </div>
 
           <div class="demo-row">

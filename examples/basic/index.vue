@@ -8,31 +8,31 @@
       <div class="demo-block">
         <h3>基础用法</h3>
         <div class="demo-row">
-          <zx-button>默认按钮</z-button>
-          <zx-button type="primary">主要按钮</z-button>
-          <zx-button type="success">成功按钮</z-button>
-          <zx-button type="warning">警告按钮</z-button>
-          <zx-button type="danger">危险按钮</z-button>
+          <zx-button>默认按钮</zx-button>
+          <zx-button type="primary">主要按钮</zx-button>
+          <zx-button type="success">成功按钮</zx-button>
+          <zx-button type="warning">警告按钮</zx-button>
+          <zx-button type="danger">危险按钮</zx-button>
         </div>
       </div>
 
       <div class="demo-block">
         <h3>禁用状态</h3>
         <div class="demo-row">
-          <zx-button disabled>默认按钮</z-button>
-          <zx-button type="primary" disabled>主要按钮</z-button>
-          <zx-button type="success" disabled>成功按钮</z-button>
-          <zx-button type="warning" disabled>警告按钮</z-button>
-          <zx-button type="danger" disabled>危险按钮</z-button>
+          <zx-button disabled>默认按钮</zx-button>
+          <zx-button type="primary" disabled>主要按钮</zx-button>
+          <zx-button type="success" disabled>成功按钮</zx-button>
+          <zx-button type="warning" disabled>警告按钮</zx-button>
+          <zx-button type="danger" disabled>危险按钮</zx-button>
         </div>
       </div>
 
       <div class="demo-block">
         <h3>不同尺寸</h3>
         <div class="demo-row">
-          <zx-button size="small">小型按钮</z-button>
-          <zx-button>默认按钮</z-button>
-          <zx-button size="large">大型按钮</z-button>
+          <zx-button size="small">小型按钮</zx-button>
+          <zx-button>默认按钮</zx-button>
+          <zx-button size="large">大型按钮</zx-button>
         </div>
       </div>
     </section>

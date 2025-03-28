@@ -26,8 +26,8 @@
         />
       </z-form-item>
       <zx-form-item>
-        <zx-button type="primary" @click="handleSubmit">登录</z-button>
-        <zx-button @click="handleReset">重置</z-button>
+        <zx-button type="primary" @click="handleSubmit">登录</zx-button>
+        <zx-button @click="handleReset">重置</zx-button>
       </z-form-item>
     </z-form>
   </div>
@@ -89,10 +89,10 @@ const handleReset = () => {
         <template #default="{ row }">
           <zx-button type="primary" size="small" @click="handleEdit(row)">
             编辑
-          </z-button>
+          </zx-button>
           <zx-button type="danger" size="small" @click="handleDelete(row)">
             删除
-          </z-button>
+          </zx-button>
         </template>
       </z-table-column>
     </z-table>
@@ -139,13 +139,13 @@ const handleDelete = (row: any) => {
         @click="changeTheme(theme)"
       >
         {{ theme.label }}
-      </z-button>
+      </zx-button>
     </z-space>
 
     <div class="preview-area">
       <zx-card>
         <zx-space direction="vertical">
-          <zx-button type="primary">主要按钮</z-button>
+          <zx-button type="primary">主要按钮</zx-button>
           <zx-input placeholder="请输入内容" />
           <zx-switch v-model="switchValue" />
         </z-space>
@@ -204,11 +204,11 @@ const changeTheme = (theme: { name: string }) => {
         :prop="'fields.' + index + '.value'"
       >
         <zx-input v-model="field.value" />
-        <zx-button type="danger" @click="removeField(index)">删除</z-button>
+        <zx-button type="danger" @click="removeField(index)">删除</zx-button>
       </z-form-item>
       <zx-form-item>
-        <zx-button type="primary" @click="addField">添加字段</z-button>
-        <zx-button type="success" @click="submitForm">提交</z-button>
+        <zx-button type="primary" @click="addField">添加字段</zx-button>
+        <zx-button type="success" @click="submitForm">提交</zx-button>
       </z-form-item>
     </z-form>
   </div>

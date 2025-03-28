@@ -70,7 +70,7 @@ export default defineComponent({
     const checkboxGroup = inject<CheckboxGroupInstance>('checkboxGroup', {} as CheckboxGroupInstance)
 
     const isChecked = computed(() => {
-      if (checkboxGroup) {
+      if (checkboxGroup && checkboxGroup.modelValue) {
         return checkboxGroup.modelValue.includes(props.label)
       }
       return props.modelValue
