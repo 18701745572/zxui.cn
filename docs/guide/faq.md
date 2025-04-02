@@ -267,8 +267,8 @@ const ComplexComponent = defineAsyncComponent(() =>
 1. 克隆仓库并安装依赖：
 
 ```bash
-git clone https://github.com/your-repo/zxui-cn.git
-cd zxui-cn
+git clone https://github.com/18701745572/zxui.cn.git
+cd zxui.cn
 pnpm install
 ```
 

@@ -7,7 +7,7 @@
 1. Fork 本仓库
 2. 克隆你的 fork 仓库到本地
 ```bash
-git clone https://github.com/YOUR_USERNAME/zxui-cn.git
+git clone https://github.com/18701745572/zxui.cn.git
 ```
 
 3. 创建新的特性分支
@@ -82,4 +82,4 @@ npm run docs:dev
 
 ## 问题反馈
 
-如果你发现了 bug 或有新的功能建议，请先查看 [issues](https://github.com/YOUR_USERNAME/zxui-cn/issues) 列表，确保没有重复的问题。 
+如果你发现了 bug 或有新的功能建议，请先查看 [issues](https://github.com/18701745572/zxui.cn/issues) 列表，确保没有重复的问题。 

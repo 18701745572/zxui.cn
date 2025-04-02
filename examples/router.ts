@@ -56,210 +56,211 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/basic'
+      redirect: '/ds/basic'
     },
     {
-      path: '/basic',
-      component: Basic
+      path: '/ds/basic',
+      component: Basic,
+      alias: '/'
     },
     {
-      path: '/theme',
+      path: '/ds/theme',
       component: Theme
     },
     {
-      path: '/alert',
+      path: '/ds/alert',
       component: Alert
     },
     {
-      path: '/avatar',
+      path: '/ds/avatar',
       component: Avatar
     },
     {
-      path: '/audio',
+      path: '/ds/audio',
       component: Audio
     },
     {
-      path: '/badge',
+      path: '/ds/badge',
       component: Badge
     },
     {
-      path: '/button',
+      path: '/ds/button',
       component: Button
     },
     {
-      path: '/card',
+      path: '/ds/card',
       component: Card
     },
     {
-      path: '/cascader',
+      path: '/ds/cascader',
       component: Cascader
     },
     {
-      path: '/checkbox',
+      path: '/ds/checkbox',
       component: Checkbox
     },
     {
-      path: '/color-picker',
+      path: '/ds/color-picker',
       component: ColorPicker
     },
     {
-      path: '/csv',
+      path: '/ds/csv',
       component: Csv
     },
     {
-      path: '/date-picker',
+      path: '/ds/date-picker',
       component: DatePicker
     },
     {
-      path: '/date-time-picker',
+      path: '/ds/date-time-picker',
       component: DateTimePicker
     },
     {
-      path: '/drawer',
+      path: '/ds/drawer',
       component: Drawer
     },
     {
-      path: '/excel',
+      path: '/ds/excel',
       component: Excel
     },
     {
-      path: '/form',
+      path: '/ds/form',
       component: Form
     },
     {
-      path: '/html',
+      path: '/ds/html',
       component: Html
     },
     {
-      path: '/image',
+      path: '/ds/image',
       component: Image
     },
     {
-      path: '/input',
+      path: '/ds/input',
       component: Input
     },
     {
-      path: '/input-number',
+      path: '/ds/input-number',
       component: InputNumber
     },
     {
-      path: '/json',
+      path: '/ds/json',
       component: Json
     },
     {
-      path: '/markdown',
+      path: '/ds/markdown',
       component: Markdown
     },
     {
-      path: '/message',
+      path: '/ds/message',
       component: Message
     },
     {
-      path: '/modal',
+      path: '/ds/modal',
       component: Modal
     },
     {
-      path: '/pdf',
+      path: '/ds/pdf',
       component: Pdf
     },
     {
-      path: '/power-point',
+      path: '/ds/power-point',
       component: PowerPoint
     },
     {
-      path: '/progress',
+      path: '/ds/progress',
       component: Progress
     },
     {
-      path: '/radio',
+      path: '/ds/radio',
       component: Radio
     },
     {
-      path: '/rate',
+      path: '/ds/rate',
       component: Rate
     },
     {
-      path: '/select',
+      path: '/ds/select',
       component: Select
     },
     {
-      path: '/skeleton',
+      path: '/ds/skeleton',
       component: Skeleton
     },
     {
-      path: '/slider',
+      path: '/ds/slider',
       component: Slider
     },
     {
-      path: '/steps',
+      path: '/ds/steps',
       component: Steps
     },
     {
-      path: '/switch',
+      path: '/ds/switch',
       component: Switch
     },
     {
-      path: '/table',
+      path: '/ds/table',
       component: Table
     },
     {
-      path: '/tabs',
+      path: '/ds/tabs',
       component: Tabs
     },
     {
-      path: '/tag',
+      path: '/ds/tag',
       component: Tag
     },
     {
-      path: '/time-picker',
+      path: '/ds/time-picker',
       component: TimePicker
     },
     {
-      path: '/timeline',
+      path: '/ds/timeline',
       component: Timeline
     },
     {
-      path: '/tooltip',
+      path: '/ds/tooltip',
       component: Tooltip
     },
     {
-      path: '/transfer',
+      path: '/ds/transfer',
       component: Transfer
     },
     {
-      path: '/tree',
+      path: '/ds/tree',
       component: Tree
     },
     {
-      path: '/txt',
+      path: '/ds/txt',
       component: Txt
     },
     {
-      path: '/upload',
+      path: '/ds/upload',
       component: Upload
     },
     {
-      path: '/video',
+      path: '/ds/video',
       component: Video
     },
     {
-      path: '/webview',
+      path: '/ds/webview',
       component: Webview
     },
     {
-      path: '/word',
+      path: '/ds/word',
       component: Word
     },
     {
-      path: '/xml',
+      path: '/ds/xml',
       component: Xml
     },
     {
-      path: '/xlsx',
+      path: '/ds/xlsx',
       component: Xlsx
     },
     {
-      path: '/yaml',
+      path: '/ds/yaml',
       component: Yaml
     }
   ]

@@ -200,8 +200,8 @@ pnpm dev
 
 如果你发现了 bug 或者有新的想法，欢迎：
 
-1. [提交 Issue](https://github.com/your-repo/zxui-cn/issues/new)
-2. [提交 Pull Request](https://github.com/your-repo/zxui-cn/pulls)
+1. [提交 Issue](https://github.com/18701745572/zxui.cn/issues/new)
+2. [提交 Pull Request](https://github.com/18701745572/zxui.cn/pulls)
 
 详细信息请参考[贡献指南](/guide/contributing)。
 

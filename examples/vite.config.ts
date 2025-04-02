@@ -5,7 +5,7 @@ import { fileURLToPath, URL } from 'node:url'
 export default defineConfig({
   plugins: [vue()],
   root: './',
-  base: '/',
+  base: '/ds/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('.', import.meta.url)),
@@ -16,7 +16,7 @@ export default defineConfig({
     include: ['vue']
   },
   build: {
-    outDir: 'dist/examples',
+    outDir: 'dist/ds',
     emptyOutDir: true,
     sourcemap: true,
     commonjsOptions: {

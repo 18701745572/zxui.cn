@@ -22,14 +22,14 @@
 
 1. Fork 仓库
 ```bash
-# 访问 https://github.com/yourusername/zxui-cn
+# 访问 https://github.com/18701745572/zxui.cn
 # 点击 Fork 按钮创建自己的仓库副本
 ```
 
 2. 克隆代码
 ```bash
-git clone https://github.com/你的用户名/zxui-cn.git
-cd zxui-cn
+git clone https://github.com/你的用户名/zxui.cn.git
+cd zxui.cn
 ```
 
 3. 安装依赖
@@ -279,7 +279,7 @@ pnpm publish
 如果你在开发过程中遇到问题：
 
 1. 查看[常见问题](./faq)
-2. 搜索 [Issues](https://github.com/yourusername/zxui-cn/issues)
+2. 搜索 [Issues](https://github.com/18701745572/zxui.cn/issues)
 3. 加入技术交流群
 4. 联系维护团队
 

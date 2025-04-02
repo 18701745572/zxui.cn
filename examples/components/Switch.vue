@@ -6,10 +6,72 @@
     <h2>基础用法</h2>
     <div class="demo-block">
       <div class="demo-block-content">
-        <zx-switch></zx-switch>
+        <zx-switch v-model="basicSwitch"></zx-switch>
+        <div class="demo-text">当前状态: {{ basicSwitch ? '开启' : '关闭' }}</div>
       </div>
       <div class="demo-block-description">
-        Switch 开关的基础用法示例。
+        使用 <code>v-model</code> 绑定一个 <code>Boolean</code> 类型的变量。
+      </div>
+    </div>
+
+    <h2>不同尺寸</h2>
+    <div class="demo-block">
+      <div class="demo-block-content">
+        <div class="switch-size-demo">
+          <div class="switch-item">
+            <span class="label">小号：</span>
+            <zx-switch v-model="sizeSmall" size="small"></zx-switch>
+          </div>
+          <div class="switch-item">
+            <span class="label">默认：</span>
+            <zx-switch v-model="sizeMedium"></zx-switch>
+          </div>
+          <div class="switch-item">
+            <span class="label">大号：</span>
+            <zx-switch v-model="sizeLarge" size="large"></zx-switch>
+          </div>
+        </div>
+      </div>
+      <div class="demo-block-description">
+        使用 <code>size</code> 属性来设置开关的大小，可选值为 <code>small</code>、<code>medium</code>（默认）和 <code>large</code>。
+      </div>
+    </div>
+
+    <h2>禁用状态</h2>
+    <div class="demo-block">
+      <div class="demo-block-content">
+        <zx-switch v-model="disabledOn" disabled></zx-switch>
+        <zx-switch v-model="disabledOff" disabled style="margin-left: 20px;"></zx-switch>
+        <div class="demo-buttons" style="margin-top: 10px;">
+          <zx-button size="small" @click="disabledOn = !disabledOn">切换第一个的值</zx-button>
+          <zx-button size="small" @click="disabledOff = !disabledOff" style="margin-left: 10px;">切换第二个的值</zx-button>
+        </div>
+      </div>
+      <div class="demo-block-description">
+        通过设置 <code>disabled</code> 属性为 <code>true</code> 来禁用开关。禁用状态下开关不可点击，但可以通过代码切换其状态。
+      </div>
+    </div>
+
+    <h2>带有文字描述</h2>
+    <div class="demo-block">
+      <div class="demo-block-content">
+        <zx-switch v-model="textSwitch">
+          {{ textSwitch ? '开启' : '关闭' }}
+        </zx-switch>
+      </div>
+      <div class="demo-block-description">
+        使用插槽可以在开关旁边添加文字描述，通过开关状态动态改变文字。
+      </div>
+    </div>
+
+    <h2>监听状态变化</h2>
+    <div class="demo-block">
+      <div class="demo-block-content">
+        <zx-switch v-model="eventSwitch" @change="handleSwitchChange"></zx-switch>
+        <div class="demo-text">状态变化记录: {{ changeLog }}</div>
+      </div>
+      <div class="demo-block-description">
+        通过 <code>change</code> 事件可以实时监听开关状态的变化，回调函数返回开关的新状态值。
       </div>
     </div>
 
@@ -26,13 +88,26 @@
       </thead>
       <tbody>
         <tr>
-          <td>value / v-model</td>
+          <td>v-model / modelValue</td>
           <td>绑定值</td>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
+          <td>boolean</td>
+          <td>true / false</td>
+          <td>false</td>
         </tr>
-        <!-- 添加更多属性 -->
+        <tr>
+          <td>size</td>
+          <td>开关尺寸</td>
+          <td>string</td>
+          <td>small / medium / large</td>
+          <td>medium</td>
+        </tr>
+        <tr>
+          <td>disabled</td>
+          <td>是否禁用</td>
+          <td>boolean</td>
+          <td>true / false</td>
+          <td>false</td>
+        </tr>
       </tbody>
     </table>
 
@@ -49,13 +124,40 @@
         <tr>
           <td>change</td>
           <td>值变化时触发</td>
-          <td>新值</td>
+          <td>新值 (boolean)</td>
         </tr>
-        <!-- 添加更多事件 -->
+        <tr>
+          <td>update:modelValue</td>
+          <td>更新v-model绑定值时触发</td>
+          <td>新值 (boolean)</td>
+        </tr>
       </tbody>
     </table>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      basicSwitch: false,
+      sizeSmall: true,
+      sizeMedium: true,
+      sizeLarge: true,
+      disabledOn: true,
+      disabledOff: false,
+      textSwitch: false,
+      eventSwitch: false,
+      changeLog: ''
+    }
+  },
+  methods: {
+    handleSwitchChange(value) {
+      this.changeLog = `开关状态在 ${new Date().toLocaleTimeString()} 变更为: ${value ? '开启' : '关闭'}`
+    }
+  }
+}
+</script>
 
 <style scoped>
 .component-demo {
@@ -101,6 +203,29 @@ h2 {
   background-color: #fafafa;
   font-size: 14px;
   line-height: 1.5;
+  color: #606266;
+}
+
+.demo-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #606266;
+}
+
+.switch-size-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.switch-item {
+  display: flex;
+  align-items: center;
+}
+
+.switch-item .label {
+  width: 50px;
+  font-size: 14px;
   color: #606266;
 }
 
