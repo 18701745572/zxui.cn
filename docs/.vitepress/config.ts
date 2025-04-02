@@ -55,7 +55,7 @@ export default defineConfig({
       { text: '指南', link: '/guide/' },
       { text: '组件', link: '/components/' },
       { text: '示例', link: '/examples/' },
-      { text: '全览', link: '/ds/basic', target: '_self' }
+      { text: '全览', link: '/ds/', target: '_blank' }
     ],
     
     sidebar: {
